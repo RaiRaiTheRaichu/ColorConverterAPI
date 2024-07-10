@@ -20,7 +20,7 @@ namespace RaiRai.ColorConverter
         /// <summary>
         /// Regex for determining if a string is a valid hex color code. Accepts both short-hand (#F00) and full-length (#FF00000) color codes.
         /// </summary>
-        private static readonly Regex ColorCodeRegex = new Regex(@"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+        private static readonly Regex ColorCodeRegex = new Regex(@"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8}|[A-Fa-f0-9]{3})$", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
         /// <summary>
         /// Simple writer method, purely to satisfy the implementation requirement for a <see cref="JsonConverter"/>.

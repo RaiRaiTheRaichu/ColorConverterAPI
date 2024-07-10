@@ -1,13 +1,13 @@
 # Color Converter API
 
-An SPT-AKI module mod that extends the functionality of the client, allowing the server to use raw hexcode color values for fields that ordinarily can only support BSG-created color enums.
+An SPT module mod that extends the functionality of the client, allowing the server to use raw hexcode color values for fields that ordinarily can only support BSG-created color enums.
 
 This mod should be forward-compatible with all new client releases for EFT (unless something very, very significant changes) and does NOT need to be updated.
 
 ### How to install
 
 1. Download the latest release here: [link](https://github.com/RaiRaiTheRaichu/ColorConverterAPI/releases) -OR- build from source (instructions below)
-2. Simply extract the zip file contents into your root SPT-AKI folder (where EscapeFromTarkov.exe is).
+2. Simply extract the zip file contents into your root SPT folder (where EscapeFromTarkov.exe is).
 3. Your `BepInEx/plugins` folder should now contain a `RaiRai.ColorConverterAPI.dll` file inside.
 
 ### Known issues
@@ -45,6 +45,9 @@ Short 3-byte hexcode colors are also supported like so:
 Which will be interpreted as:
 `"BackgroundColor": "#FF9900",`
 
+As of version 1.1.0, you can optionally pass a fourth hex value for an Alpha (otherwise, it is treated as FF/255).
+`"BackgroundColor": "#FF2AFF99",`
+
 ### How to build from source
 
 1. Download/clone this repository.
@@ -55,13 +58,15 @@ Which will be interpreted as:
 ### Reference list
 
 Copy to this project's folder (create if it does not exist) `references/EFT/Managed`:
-- Aki.Reflection.dll
 - Assembly-CSharp.dll
 - Newtonsoft.Json.dll
 - UnityEngine.dll
 - UnityEngine.CoreModule.dll
 
-These can be found in your SPT install's `EscapeFromTarkov_Data/Managed/` folder.
+Copy to this project's folder (create if it does not exist) `references/Bepinex`:
+- spt-reflection.dll
+
+These can be found in your SPT install's `EscapeFromTarkov_Data/Managed/` folder and your `BepInEx/Plugins/spt/` folder.
 
 ### Credits
 RaiRaiTheRaichu

@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace RaiRai.ColorConverter
 {
-    [BepInPlugin("com.rairai.colorconverterapi.eft", "ColorConverterAPI", "1.0.0")]
+    [BepInPlugin("com.rairai.colorconverterapi.eft", "ColorConverterAPI", "1.1.0")]
     public class Plugin: BaseUnityPlugin
     {
         public Plugin()
