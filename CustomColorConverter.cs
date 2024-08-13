@@ -54,7 +54,7 @@ namespace RaiRai.ColorConverter
                             }
 
                             // We try parsing the string value normally
-                            if (Enum.TryParse<TaxonomyColor>(valueString, out var enumValue))
+                            if (Enum.TryParse<TaxonomyColor>(valueString, ignoreCase: true, out var enumValue))
                             {
                                 return enumValue;
                             }
